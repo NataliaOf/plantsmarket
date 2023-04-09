@@ -1,0 +1,115 @@
+@import './../../App.css';
+
+.navigate{
+  display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+
+.navigane__logo{
+   font-family: 'Nunito';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 24px;
+   line-height: 33px;
+   color: var(--h-color, #1A1A1A);
+   
+}
+
+.navigate__menu{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+   font-weight: 400;
+   line-height: 21px;
+   color: var(--h-color);
+
+}
+
+.navigate__btn{
+
+   font-weight: 400;
+   font-size: var(--size-font);
+   line-height: 21px;
+   padding: 12px 16px;
+/* background-color:#ECECEC; */
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+  color: #1A1A1A;
+   margin-left: 47px;
+}
+
+.greenb_btn{
+   
+   background: var(--green);
+   font-weight: 400;
+   font-size: var(--size-font);
+   line-height: 21px;
+   padding: 12px 16px;
+   color:  var(--backg);
+   border-radius: 4px;
+   border: none;
+   cursor: pointer;
+}
+
+
+
+/* nnnnnnnnnnnnnnnnn */
+.header{
+   display: flex;
+   justify-content: space-between;
+   /* gap:40px; */
+   margin-top: 40px;
+}
+
+h1{
+   font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 72px;
+line-height: 92px;
+/* or 128% */
+
+
+color: #1A1A1A;
+}
+.header_text{
+   font-family: 'DM Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 160%;
+/* or 26px */
+
+margin-bottom: 40px;
+color: #4A4A4A;
+}
+
+.info_list{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 40px;
+}
+
+.info_title{
+   font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 49px;
+
+color: #001B04;
+}
+.info_descriptio{
+   
+font-family: 'DM Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 23px;
+
+color: #1A1A1A;
+}
