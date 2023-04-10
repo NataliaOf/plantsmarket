@@ -1,0 +1,62 @@
+@import '../../index.css';
+
+.navigate{
+   display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+ 
+ 
+ .navigane__logo{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    color: var(--h-color, #1A1A1A);
+    
+ }
+ 
+ .navigate__menu{
+     display: flex;
+     justify-content: space-between;
+     gap: 2rem;
+    font-weight: 400;
+    line-height: 21px;
+    color: var(--h-color);
+ 
+ }
+ 
+ .navigate__login{
+ 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+ }
+ .navigate__btn{
+ 
+    font-weight: 400;
+    font-size: var(--size-font);
+    line-height: 21px;
+    padding: 12px 16px;
+ /* background-color:#ECECEC; */
+    border: none;
+    border-radius: 4px;
+ 
+   color: #1A1A1A;
+    width: 100px;
+ }
+ 
+ 
+ 
+   @media (min-width: 870px) {
+   
+      .navigate__menu{
+         display: block;
+      }
+    }
+    
+    
+  
+ 

@@ -1,0 +1,20 @@
+@import '../../index.css';
+ 
+ 
+
+ 
+
+.box{
+   font-family: var(--p-font);
+   color: var(--p-color);
+   font-size: var(--size-font);
+   padding:var(--padding);
+  
+}
+
+.wrapper{
+   width: clamp(200px, 90%, 1152px);
+   margin: 0 auto;
+   border:2px solid red;
+   padding: var(--padding);
+}
