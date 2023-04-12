@@ -1,0 +1,16 @@
+@import './../../index.css';
+
+.input{
+   padding: 8px 8px 8px 20px;
+   background: inherit;
+   border: none;
+   outline:none;
+}
+.input::placeholder{
+   color:#5A5A5A;
+   font-style: normal;
+   
+   font-weight: 400;
+   font-size: 14px;
+   height: 18px;
+}

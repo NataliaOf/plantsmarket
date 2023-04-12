@@ -1,0 +1,21 @@
+
+
+.info_title{
+   font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 49px;
+
+color: #001B04;
+}
+.info_description{
+   
+font-family: 'DM Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 23px;
+
+color: #1A1A1A;
+}

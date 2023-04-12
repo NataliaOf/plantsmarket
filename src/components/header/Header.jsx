@@ -1,11 +1,13 @@
 import React from 'react';
 import styles from './header.module.css';
 import img from './../../imges/klipartz 5.png';
-import BtnGreen from '../btngreen/BtnGreen';
 import NavHeader from '../navigate/NavHeader';
+import Skils from '../skils/Skils';
+import LinkGreen from '../linkgreen/LinkGreen';
 
-// className={styles.makeItGreen}
 function Header(){
+  
+   const skils =[{title :' 2000 ', description : 'Delivery'},{title : '1200' , description : 'Customers'},{title : '1000', description : 'Product'} ]
    return(
 <div className="wrapper">
 <NavHeader/>
@@ -17,29 +19,26 @@ function Header(){
      Eu, tempor, accumsan sit amet nunc cursus. Nec tristique 
      at in erat lectus mas sa diam. Lectus elit, nulla elementum fringilla at.
      </p>
-     <BtnGreen text="Lern more"/>
+     <LinkGreen text="Lern more..."/>
      <div className={styles.info}>
        <div className={styles.info_list}>
-       <div className={styles.info_item}>
-            <h3 className={styles.info_title}>2000+</h3>
-            <p className={styles.info_description}>Delivery</p>
-          </div>
-          <div className={styles.info_item}>
-            <h3 className={styles.info_title}>1200+</h3>
-            <p  className={styles.info_description}>Customers</p>
-          </div>
-          <div className={styles.info_item}>
-            <h3 className={styles.info_title}>1000+</h3>
-            <p  className={styles.info_description}>Product</p>
-          </div>
-       </div>
+
+         {skils.map((skil)=>(
+          <Skils title={skil.title} text={skil.description}/>
+        
+         ))}
+
+     </div>
        
      </div>
-   </div>
+   </div >
    <div className={styles.header_img}>
       <img src={img} alt="альтернативний текст"/>
    </div>
  </div>
+
+ 
+
 </div>
    )
 }

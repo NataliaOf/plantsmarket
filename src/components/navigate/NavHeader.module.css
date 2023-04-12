@@ -4,6 +4,12 @@
    display: flex;
     justify-content: space-between;
     align-items: center;
+    position:fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--backg);
+    width: 100vw;
+    padding: 2vw 5vw;
  }
  
  
@@ -24,7 +30,13 @@
     font-weight: 400;
     line-height: 21px;
     color: var(--h-color);
- 
+    transition: all 1s ease-out;
+ }
+ .navigate__menu > li{
+   padding: var(--padding);
+ }
+ .clousr_burger{
+   display: none;
  }
  
  .navigate__login{
@@ -33,6 +45,7 @@
     justify-content: space-around;
     align-items: center;
     gap: 2rem;
+    width: auto;
  }
  .navigate__btn{
  
@@ -40,6 +53,7 @@
     font-size: var(--size-font);
     line-height: 21px;
     padding: 12px 16px;
+    /* margin-right: 10px; */
  /* background-color:#ECECEC; */
     border: none;
     border-radius: 4px;
@@ -50,11 +64,29 @@
  
  
  
-   @media (min-width: 870px) {
+   @media (max-width: 870px) {
    
       .navigate__menu{
          display: block;
+         width: 100vw;
+         margin: 0 auto;
+        
+         background-color: var(--backg);
+         position: absolute;
+         top:0px;
+         left:0px;
+         transform: translate(0px, -150%);
       }
+
+      .navigate__menu.activ{
+         transform: translate(0px, 0%);
+         transition: all 1s ease-out;
+      }
+      .navigate__menu > li{
+         margin: 5vw;
+         
+      }
+      
     }
     
     

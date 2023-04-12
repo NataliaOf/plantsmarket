@@ -6,7 +6,12 @@
    display: flex;
    justify-content: space-between;
    /* gap:40px; */
-   margin-top: 40px;
+   margin-top: 5rem;
+  
+}
+
+.header_info{
+   width: 50vw;;
 }
 
 h1{
@@ -38,23 +43,6 @@ color: #4A4A4A;
    align-items: center;
    margin-top: 40px;
 }
-
-.info_title{
-   font-family: 'Nunito';
-font-style: normal;
-font-weight: 700;
-font-size: 36px;
-line-height: 49px;
-
-color: #001B04;
-}
-.info_descriptio{
-   
-font-family: 'DM Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-line-height: 23px;
-
-color: #1A1A1A;
+.header_img{
+   width: 50%;
 }

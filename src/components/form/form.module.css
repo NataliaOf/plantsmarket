@@ -1,0 +1,18 @@
+@import './../../index.css';
+
+.form{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   padding: var(--padding);
+   gap: var(--padding);
+
+background: var(--light-green);
+border-radius: 4px;
+}
+
+.input_container{
+   display: flex;
+   justify-content: space-between;
+   gap: var(--padding);
+}
