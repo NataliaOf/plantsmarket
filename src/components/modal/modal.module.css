@@ -1,0 +1,49 @@
+@import './../../index.css';
+.modal_box{
+    position: fixed;
+   z-index: 3;
+   width: 100vw;
+   height: 100vh;
+    display: flex;
+   justify-content: center;
+    align-items: center; 
+    background: rgb(223 255 227 / 64%);
+   transform: scale(0.4) translateY(-150vh);
+   /* transform: scale(1) translateY(0vw); */
+   transition:  transform 2s ease;
+}
+
+.modal_box.active{
+   transform: scale(1) translateY(0vh);
+   transition:  transform 2s ease;
+}
+.modal{
+   width: 50vw;
+   padding: var(--padding);
+   text-align: center;
+   background: var(--backg);
+   border-radius: 4px;
+  border:2px solid var(--green);
+   
+}
+
+.modal h3{
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 49px;
+
+color: #1A1A1A;
+}
+
+.modal p{
+   font-weight: 400;
+font-size: 16px;
+line-height: 160%;
+/* or 26px */
+
+
+color: #4A4A4A;
+
+}

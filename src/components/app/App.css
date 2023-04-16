@@ -16,6 +16,5 @@
 .wrapper{
    width: clamp(200px, 90%, 1152px);
    margin: 0 auto;
-   border:2px solid red;
    padding: var(--padding);
 }

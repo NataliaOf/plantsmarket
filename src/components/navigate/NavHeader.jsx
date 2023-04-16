@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import {FiAlignJustify, FiAlignCenter } from 'react-icons/fi';
 import styles from './NavHeader.module.css';
 import BtnGreen from '../btngreen/BtnGreen';
 
@@ -22,7 +23,9 @@ function NavHeader(){
 
        <ul className={burger ? classs : styles.navigate__menu} >
            <li className={burger? '': styles.clousr_burger }>
-             <BtnGreen  onClick ={ openBurgerMenu}  text="Clouse"/>
+             <div  className={styles.openMenu} onClick ={ openBurgerMenu} >
+               <FiAlignCenter style={{ margin:'1px auto'}}/>
+             </div>
            </li>
             
             <li>
@@ -37,7 +40,7 @@ function NavHeader(){
             <li>
                <a href='#'>Blog</a>
             </li>
-            <li>
+            <li className={styles.active}>
                <a href='#'>Contact</a>
             </li>
          </ul> 
@@ -50,11 +53,20 @@ function NavHeader(){
       
       <div className={styles.navigate__login}>
          <p className={styles.navigate__btn}>Loging</p>
-        <BtnGreen onClick ={ openBurgerMenu} text="Sing up"/>
+        <BtnGreen  text="Sing up"/>
+        <div className={styles.hedden} onClick ={ openBurgerMenu}>
+        
+         <FiAlignJustify style={{ margin:'1px auto'}}/>
+        
       </div>
+      </div>
+     
+      
+     
     </div>
    );
 };
+
 
 
 export default NavHeader;

@@ -45,4 +45,40 @@ color: #4A4A4A;
 }
 .header_img{
    width: 50%;
+   position: relative;
 }
+
+@keyframes leaveMove {
+   0% {
+      left:60%;
+      top:-20%;
+      transform: rotate(10deg);
+   }
+
+   30% {
+      left: 20%;
+      top:10%;
+      transform: rotate(60deg);
+   }
+  
+   60% {
+      left: 60%;
+      top:30%;
+      transform: rotate(40deg);
+   }
+   100%{
+      left: 20%;
+      top: 100%;
+      transform: rotate(60deg);
+   }
+}
+.header_img__move{
+   position: fixed;
+   left: 40%;
+   top:50%;
+   width: 20vw;
+   animation:  leaveMove 10s infinite;
+}
+
+
+ 

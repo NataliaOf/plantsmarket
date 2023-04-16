@@ -1,9 +1,13 @@
 import React from 'react';
 import styles from './header.module.css';
 import img from './../../imges/klipartz 5.png';
+import leaves from './../../imges/leaves.png';
 import NavHeader from '../navigate/NavHeader';
 import Skils from '../skils/Skils';
 import LinkGreen from '../linkgreen/LinkGreen';
+import BtnGreen from '../btngreen/BtnGreen';
+import Form from '../form/Form';
+import Input from '../input/Input';
 
 function Header(){
   
@@ -33,6 +37,7 @@ function Header(){
      </div>
    </div >
    <div className={styles.header_img}>
+      <img className={styles.header_img__move} src={leaves} alt="leaves"/>
       <img src={img} alt="альтернативний текст"/>
    </div>
  </div>
