@@ -1,10 +1,13 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import {FiAlignJustify, FiAlignCenter } from 'react-icons/fi';
 import styles from './NavHeader.module.css';
 import BtnGreen from '../btngreen/BtnGreen';
+import Context from '../../helper/context';
 
 function NavHeader(){
+
+   const {  openModal }= useContext(Context);
     const [burger , setBurger] = useState(false);
     const classs = styles.navigate__menu + ' ' + styles.activ;
     const openBurgerMenu = () => {
@@ -12,19 +15,19 @@ function NavHeader(){
      
     }
 
-   
+
 
    return(
       <div className={styles.navigate}>
       <div className={styles.navigane__logo}>
         Plant
       </div>
-       <div className={ styles.navigate__nav}>
+       <nav className={ styles.navigate__nav}>
 
        <ul className={burger ? classs : styles.navigate__menu} >
            <li className={burger? '': styles.clousr_burger }>
-             <div  className={styles.openMenu} onClick ={ openBurgerMenu} >
-               <FiAlignCenter style={{ margin:'1px auto'}}/>
+             <div  className={styles.openMenu} onClick={openBurgerMenu} >
+               <FiAlignCenter stroke='#ECECEC'/>
              </div>
            </li>
             
@@ -48,17 +51,15 @@ function NavHeader(){
         
         
         
-      </div>
+      </nav>
      
       
       <div className={styles.navigate__login}>
          <p className={styles.navigate__btn}>Loging</p>
-        <BtnGreen  text="Sing up"/>
+        <BtnGreen  text="Sing up"  onClick={openModal}/>
         <div className={styles.hedden} onClick ={ openBurgerMenu}>
-        
-         <FiAlignJustify style={{ margin:'1px auto'}}/>
-        
-      </div>
+         <FiAlignJustify  stroke='#ECECEC'/> 
+        </div>
       </div>
      
       

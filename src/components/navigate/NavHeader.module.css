@@ -83,10 +83,13 @@
  
  .hedden,
  .openMenu{
-   padding: 3px;
+   /* padding: 3px; */
    font-size: 30px;
    width: 50px;
    height: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
    background: var(--green);
    border-radius: 50%;
    cursor: pointer;
@@ -120,7 +123,9 @@
       }
 
       .hedden{
-         display: block;
+         display: flex;
+         justify-content: center;
+         align-items: center;
        }
       
     }

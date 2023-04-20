@@ -5,9 +5,7 @@ import leaves from './../../imges/leaves.png';
 import NavHeader from '../navigate/NavHeader';
 import Skils from '../skils/Skils';
 import LinkGreen from '../linkgreen/LinkGreen';
-import BtnGreen from '../btngreen/BtnGreen';
-import Form from '../form/Form';
-import Input from '../input/Input';
+
 
 function Header(){
   
@@ -28,7 +26,7 @@ function Header(){
        <div className={styles.info_list}>
 
          {skils.map((skil)=>(
-          <Skils title={skil.title} text={skil.description}/>
+          <Skils key={skil.title} title={skil.title} text={skil.description}/>
         
          ))}
 
