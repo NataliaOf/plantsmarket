@@ -1,52 +1,59 @@
-import {useContext, useEffect, useState} from 'react';
+
+import { useForm } from "react-hook-form";
 import styles from './form.module.css';
 
-import Input from "../input/Input";
-import BtnGreen from '../btngreen/BtnGreen';
-import Context  from '../../helper/context';
 
 
 const Form = ({children})=>{
-   const {username, chengeUsername,  password , chengePasword} = useContext(Context);
+  
+ const { 
+     register,
+     handleSubmit, 
+     reset,
+     formState: { errors } 
+   
+   } = useForm({
+      mode:'onBlur'
+   });
 
-   const [usernameDirty, setUsernameDirty] = useState(false);
-   const [passwordDirty, setPasswordDirty] = useState(false);
-   const [usererror , setUsererror] = useState('Поле должно быть заполнкнно');
-   const[passworderror , setPassworderror] = useState('Поле должно быть заполнкнно');
-   const[validForm, setValidForm] = useState(false);
-
-   const blureHendler =(e)=>{
-      // console.log(e.target.name)
-      switch (e.target.name){
-       case 'username':
-         setUsernameDirty(true)
-       
-         break;
-       case 'password'  :
-         setPasswordDirty(true)
-         break
-      }
-   };
-
-//    useEffect(()=>{
-//       if(usernameDirty || passwordDirty ){
-//          setValidForm(false)
-//       }
-//       else{  setValidForm(true)}
-// console.log(validForm)
-   // }, [usernameDirty,passwordDirty])
-
+   const onSubmit=(data)=>{
+      localStorage.setItem('user', JSON.stringify(data));
+      reset();
+   }
 
    return(
       
-      <form className={styles.form} action="#">
-         <div className={styles.input_container}>
-        </div>
-        {(usernameDirty && usererror && username==='') && <div style={{color:'red'}}>{usererror}</div>}
-         <Input onBlur={blureHendler} name='username' placeholder='Username' value={username} onChange={chengeUsername}/>
-         {(passwordDirty && passworderror && password ==='') && <div style={{color:'red'}}>{passworderror}</div>}
-         <Input onBlur={blureHendler}  type='password'name ='password' placeholder='Password' value ={password} onChange={chengePasword}/>
-         <BtnGreen  type=" submit"text='Send'/>
+      <form className={styles.form}  onSubmit={handleSubmit(onSubmit)}>
+         <label> Username
+        <input className={styles.input}
+        {...register('username',{
+         required: 'The field is required',
+         minLength:{
+            value:5,
+            message:'Please enter more than 5 characters'
+         },
+         maxLength:{
+            value:15,
+            message:'Please enter less than 15 characters'
+         },
+        })}/>
+        </label>
+        <div className={styles.error}>{errors?.username && <p>{errors?.username?.message || 'Error!'}</p>}</div>
+
+        <label>Password
+        <input className={styles.input} type='password'
+        {...register('password',{
+         required: 'The field is required',
+         pattern:{
+           value : /[A-Za-z]{8}/,
+            message:'Please enter more than 8 characters "A-Za-z"'
+         },
+        })}/>
+        </label> 
+        <div className={styles.error}>{errors?.password && <p>{errors?.password?.message || 'Error!'}</p>}</div>
+       
+       <button className={styles.greenb_btn}>Send </button>
+         
       </form>
    )
 };

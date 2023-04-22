@@ -36,14 +36,12 @@ const openModal = ()=>{
 }
 
 
-const clouseModal = (modal) => {
-   console.log(modal)
-}
+
 
   return (
    <Context.Provider value={value}>
    <div className="box">
-       <Modal title='To come in' text='Enter your username and password' clouseModal={clouseModal} >
+       <Modal title='To come in' text='Enter your username and password'  >
          <Form></Form>
       </Modal>
       

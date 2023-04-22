@@ -1,11 +1,35 @@
 import React from 'react';
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import {FiAlignJustify, FiAlignCenter } from 'react-icons/fi';
 import styles from './NavHeader.module.css';
 import BtnGreen from '../btngreen/BtnGreen';
 import Context from '../../helper/context';
 
 function NavHeader(){
+ const [username, setUsername] = useState('log in')
+const getUsername = ()=>{
+
+   let user = localStorage.getItem('user');
+
+ if(user === null) {
+   return 
+ }else{
+   setUsername(JSON.parse(user).username)
+     
+   
+ }
+ console.log("getUsername")
+ return username
+}
+const outSide =()=>{
+   localStorage.removeItem('user');
+   setUsername('log in')
+  
+   return 
+}
+useEffect(()=>{
+   getUsername()
+})
 
    const {  openModal }= useContext(Context);
     const [burger , setBurger] = useState(false);
@@ -15,7 +39,7 @@ function NavHeader(){
      
     }
 
-
+console.log(username)
 
    return(
       <div className={styles.navigate}>
@@ -55,13 +79,15 @@ function NavHeader(){
      
       
       <div className={styles.navigate__login}>
-         <p className={styles.navigate__btn}>Loging</p>
-        <BtnGreen  text="Sing up"  onClick={openModal}/>
+         <p className={styles.navigate__btn}>{username}</p>
+         {username ==='log in'? <BtnGreen  text="Sing up"  onClick={openModal}/>: <BtnGreen  text="go out"  onClick={outSide}/> }
+        {/* <BtnGreen  text="Sing up"  onClick={openModal}/> */}
+        {/* <BtnGreen  text="go out"  onClick={outSide}/> */}
         <div className={styles.hedden} onClick ={ openBurgerMenu}>
          <FiAlignJustify  stroke='#ECECEC'/> 
         </div>
       </div>
-     
+   
       
      
     </div>
