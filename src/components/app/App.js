@@ -4,7 +4,9 @@ import Header from '../header/Header';
 import Modal from '../modal/Modal';
 import Form from '../form/Form';
 import Footer from '../footer/Footer';
+import NewCollection from '../newColection/NewCollection';
 import Context from '../../helper/context';
+import AboutSection from '../aboutsection/AboutSection';
 
 
 function App() {
@@ -46,7 +48,8 @@ const openModal = ()=>{
       </Modal>
       
    <Header/>
-
+    <NewCollection/>
+    <AboutSection/>
    <Footer/>
     </div>
     </Context.Provider>

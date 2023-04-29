@@ -29,19 +29,18 @@ color: #1A1A1A;
    font-family: 'DM Sans';
 font-style: normal;
 font-weight: 400;
-font-size: 16px;
 line-height: 160%;
 /* or 26px */
 
-margin-bottom: 40px;
-color: #4A4A4A;
+margin-bottom: 2.5rem;
+color: var(--p-color);
 }
 
 .info_list{
    display: flex;
    justify-content: space-between;
    align-items: center;
-   margin-top: 40px;
+   margin-top: 2.5rem;
 }
 .header_img{
    width: 50%;
@@ -76,6 +75,7 @@ color: #4A4A4A;
    position: fixed;
    left: 40%;
    top:50%;
+   z-index: 3;
    width: 20vw;
    animation:  leaveMove 10s infinite;
 }

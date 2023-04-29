@@ -58,4 +58,23 @@ html {
 
 
 
- 
+ /* .slick-arrow, .slick-next{
+   background-color: #066F14;
+   }  */
+   .slick-prev:before, .slick-next:before{
+      color: #066F14 !important;
+   }
+   .slick-dots li button:before{
+      color: #066F14 !important;
+   }   
+
+   h2{
+   
+      font-family: 'Nunito';
+      font-weight: 700;
+      font-size: clamp(25px, 4vw, 36px);
+      /* font-size: 36px; */
+      line-height: clamp (30px, 2vw, 49px);
+      color: var(--h-color);
+      margin-bottom: 37px;
+   }

@@ -1,0 +1,49 @@
+@import './../../index.css';
+
+.about{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 80px;
+}
+
+.about__img,
+.about__info{
+   width: 50%;
+   position: relative;
+}
+.about__img{
+   background-color: var(--green);
+
+}
+.about__img>img{
+   width: 100%;
+   position: relative;
+   top: 2.5rem;
+   left: 2.5rem;
+}
+
+
+h3{
+   font-weight: 500;
+font-size: 1.125rem;
+line-height: 1.44rem;
+color: var(--green);
+margin-bottom: 0.75rem;
+}
+p{
+   margin-bottom: 1rem;
+}
+
+@media (max-width:750px){
+   .about{
+      display: block;
+   }
+   .about__img,
+.about__info{
+   width: 100%;
+}
+.about__img{
+   margin-bottom: 3.125rem;
+}
+}

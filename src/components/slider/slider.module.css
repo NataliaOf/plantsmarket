@@ -1,0 +1,26 @@
+@import './../../index.css'
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
+
+.conteiner{
+   width: 100%;
+
+}
+
+.slid1{
+
+   background-color: #F6EDE8;
+   text-align: center;
+}
+.slid1>img{
+   margin: 0 auto ;
+}
+.slid2{
+   margin: 0 5px;
+   background-color: #F0F1F6;
+   text-align: center;
+  
+}
+.slid2>img{
+   margin: 0 auto ;
+}
