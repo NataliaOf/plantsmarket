@@ -1,0 +1,35 @@
+.header{
+   display: flex;
+   /* justify-content: space-between; */
+   /* align-items: center; */
+   margin-top: 150px;
+   margin-bottom: 50px;
+}
+
+.header_info{
+   width: 30%;
+}
+.header_slider{
+width: 70%;
+}
+
+@media  (max-width: 800px){
+   .header{
+      display: block;
+   }
+   .header_info,
+   .header_slider{
+      width: 100%;
+   }
+   .header_info{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+  
+}
+@media  (max-width: 400px){
+   .header_info{
+      display: block;
+   }
+}

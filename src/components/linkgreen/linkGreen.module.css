@@ -2,7 +2,7 @@
 
 
 .greenb_link{
-   
+   display: inline-block;
    background: var(--green);
    font-weight: 400;
    font-size: var(--size-font);
@@ -12,4 +12,11 @@
    border-radius: 4px;
    border: none;
    cursor: pointer;
+   transition: all 0.5s ease-in;
+}
+
+.greenb_link:hover{
+   /* color: var(--green); */
+   transform: scale(1.1);
+   transition: all 0.5s ease-in;
 }

@@ -1,6 +1,6 @@
 import style from './newCollection.module.css';
 
-// import Slider from 'react-slick';
+import LinkGreen from '../linkgreen/LinkGreen';
 import SliderPlant from '../slider/Slider';
 
 
@@ -11,7 +11,7 @@ const NewCollection = () => {
       <div className={style.newColl}>
          <div className={style.newColl__info}>
          <h2>We have lots of plants collection for you and your family</h2>
-         <a className={style.newColl__link} href='#'>See all collection</a>
+         <LinkGreen text='See all collection'/>
          </div>
          <div className={style.slider}>
             <SliderPlant/>

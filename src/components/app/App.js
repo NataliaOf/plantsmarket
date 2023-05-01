@@ -7,6 +7,8 @@ import Footer from '../footer/Footer';
 import NewCollection from '../newColection/NewCollection';
 import Context from '../../helper/context';
 import AboutSection from '../aboutsection/AboutSection';
+import Subscribe from '../subscribe/Subscribe';
+
 
 
 function App() {
@@ -50,6 +52,7 @@ const openModal = ()=>{
    <Header/>
     <NewCollection/>
     <AboutSection/>
+    <Subscribe/>
    <Footer/>
     </div>
     </Context.Provider>
