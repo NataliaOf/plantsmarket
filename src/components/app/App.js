@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
 import './App.css';
-import Header from '../header/Header';
+
 import Modal from '../modal/Modal';
 import Form from '../form/Form';
-import Footer from '../footer/Footer';
-import NewCollection from '../newColection/NewCollection';
+
 import Context from '../../helper/context';
-import AboutSection from '../aboutsection/AboutSection';
-import Subscribe from '../subscribe/Subscribe';
+import Home from '../../pages/Home';
+import About from '../../pages/About';
+
 
 
 
@@ -48,12 +48,8 @@ const openModal = ()=>{
        <Modal title='To come in' text='Enter your username and password'  >
          <Form></Form>
       </Modal>
-      
-   <Header/>
-    <NewCollection/>
-    <AboutSection/>
-    <Subscribe/>
-   <Footer/>
+      <Home/>
+      {/* <About/> */}
     </div>
     </Context.Provider>
   );

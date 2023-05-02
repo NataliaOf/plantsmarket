@@ -1,0 +1,94 @@
+@import './../../index.css';
+
+.products{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  margin-top: 100px;
+
+}
+
+.products_btnBox{
+   display: flex;
+   justify-content: center;
+   gap: 25px;
+}
+
+.products_btn{
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 21px;
+   background-color: inherit;
+   border: none;
+   color: #4A4A4A;
+   padding: 5px 10px;
+   transition: all 0.5s ease-in;
+}
+
+.products_btn:hover{
+   /* font-size: 18px; */
+   /* line-height: 23px; */
+   transform: scale(1.2);
+   color: #066F14;
+   transition: all 0.5s ease-in;
+}
+
+.products_btn.activ{
+   font-size: 18px;
+   line-height: 23px;
+   color: #066F14;
+}
+
+.product{
+   /* background: #EAF2E5; */
+   padding: 30px;
+ 
+}
+
+.product_title{
+   font-family: 'Nunito';
+   font-style: normal;
+   font-weight: 600;
+   font-size: 24px;
+   line-height: 28px;
+   color: #1A1A1A;
+}
+
+.cost{
+   font-family: 'Nunito';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height, or 119% */
+
+
+color: #1A1A1A;
+}
+
+.products_box{
+	display: grid;
+   grid-template-columns: repeat(4, 1fr);
+	grid-gap: 1em;
+}
+
+.product:nth-child(2n+1){
+   background: #EAF2E5;
+   
+}
+
+
+
+
+.product:nth-child(2n+2){
+   background: #F0EBE6;
+}
+.product:nth-child(2n+3){
+   background:#E2ECE4;;
+}
+
+.product:nth-child(2n+4){
+   background: #E7EEED;
+}

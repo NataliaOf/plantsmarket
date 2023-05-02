@@ -1,0 +1,9 @@
+@import './../index.css';
+
+.page{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   min-width: 10vh;
+
+}
