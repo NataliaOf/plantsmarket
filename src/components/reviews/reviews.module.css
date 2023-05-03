@@ -1,0 +1,40 @@
+@import './../../index.css';
+
+.reviews{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap:2em;
+   margin: 100px 0;
+
+}
+.reviews_info{
+   width: 50%;
+}
+.reviews_info>h3{
+   font-family: 'Nunito';
+font-weight: 700;
+font-size: 40px;
+line-height: 50px;
+/* identical to box height, or 125% */
+
+
+color: #1A1A1A;
+}
+
+.reviews_slider{
+   width: 50vw;
+   position: relative;
+   margin: 20px 0;
+   
+}
+
+@media (max-width: 700px){
+   .reviews{
+      flex-direction: column;
+   }
+   .reviews_info,
+   .reviews_slider{
+      width: 100%;
+   }
+}

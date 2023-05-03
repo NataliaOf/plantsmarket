@@ -47,3 +47,11 @@ p{
    margin-bottom: 3.125rem;
 }
 }
+
+@media (max-width:450px){
+   .about__img>img{
+     
+      top: 1.5rem;
+      left: 1.5rem;
+   }
+}

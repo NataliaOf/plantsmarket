@@ -13,3 +13,9 @@
    border: none;
    cursor: pointer;
 }
+@media(max-width:370px){
+   .greenb_btn{
+      font-size: 14px;
+      padding: 4px 8px;
+   }
+}

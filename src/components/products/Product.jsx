@@ -12,7 +12,9 @@ const Product = ({collection})=>{
          <div className={style.stars}>
          rating: {product.rating}
          </div>
-         <div className={style.cost}>$ {product.cost}</div>
+         {product.sale !== 0 && <div  className={style.sale}>Sale: {product.sale}%</div> }
+         
+         <div className={style.cost}>$ {product.cost -(product.cost * (product.sale/100))}</div>
       </div>
 
 

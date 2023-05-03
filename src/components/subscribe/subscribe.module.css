@@ -5,8 +5,8 @@
    justify-content: space-between;
    background: #DFFFE3;
    border-radius: 6px;   
-   padding: 60px;
-   margin-top: 164px;
+   padding: clamp(15px, 4vw, 60px);
+   margin-top:clamp(30px, 6vw, 100px);
 }
 
 .subscribe_info{
@@ -16,7 +16,7 @@
    width: 40vw;
 }
 
-p{
+.subscribe_info>p{
    margin-bottom: 30px;
 }
 

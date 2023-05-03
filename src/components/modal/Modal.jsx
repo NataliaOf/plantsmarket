@@ -11,7 +11,10 @@ function Modal( {title, text,children, clouseModal}){
    return(
       <div className={modal ? classs : style.modal_box} onClick={openModal}>
          <div className={style.modal} onClick={(e)=>e.stopPropagation()}>
-         < FiX  style={{cursor:"pointer", fontSize:'40px',position:'relative', top:'10px', marginLeft:'90%'} }onClick={openModal}/>
+            <div className={style.modal_close}>
+            < FiX  onClick={openModal}/>
+            </div>
+         
          <h3>{title} </h3>
          <p>{text}</p>
            {children}

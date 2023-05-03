@@ -1,6 +1,6 @@
 @import './../../index.css';
 .footer{
-   margin-top: 8rem;
+   margin-top: clamp(1.5rem, 8vw, 8rem);
    margin-bottom: 3.12rem;
    display: flex;
    justify-content: space-between;
@@ -34,7 +34,7 @@ margin-bottom: 1.56rem;
 .footer_social{
    display: flex;
    gap:1rem;
-   margin-bottom: 25px;
+   /* margin-bottom: 25px; */
 }
 
 

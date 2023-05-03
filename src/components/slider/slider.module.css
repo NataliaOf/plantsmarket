@@ -1,4 +1,4 @@
-@import './../../index.css'
+@import './../../index.css';
 @import "~slick-carousel/slick/slick.css"; 
 @import "~slick-carousel/slick/slick-theme.css";
 
@@ -23,4 +23,52 @@
 }
 .slid2>img{
    margin: 0 auto ;
+}
+
+
+/* *************************8revivs */
+.reviews_slid{
+   background: #066F14;
+   padding: 20px;
+   color: #ECECEC;
+
+
+}
+.reviews_flex{
+   display: flex;
+   justify-content: space-between;
+   gap:1em;
+}
+.avatar_info>h3{
+ color:#fff;
+}
+
+.avatar_info>h4{
+   font-family: 'DM Sans';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 18px;
+   
+   color: #D9D9D9;
+  }
+
+
+.avatar_box{
+   display: flex;
+   justify-content: flex-start;
+   gap:1em;
+}
+
+.reviews_text{
+   font-family: 'DM Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 160%;
+/* or 26px */
+margin: 20px 0;
+
+color: #ECECEC;
+
 }

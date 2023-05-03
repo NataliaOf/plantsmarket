@@ -13,7 +13,6 @@ import plant3 from './../../imges/plant3.png'
 export default class SliderPlant extends Component {
   render() {
     const settings = {
-      dots: true,
       infinite: true,
       speed: 500,
       slidesToShow: 3,

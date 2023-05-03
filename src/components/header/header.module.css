@@ -5,7 +5,7 @@
 .header{
    display: flex;
    justify-content: space-between;
-   /* gap:40px; */
+align-items: center;
    margin-top: 5rem;
   
 }
@@ -18,8 +18,8 @@ h1{
    font-family: 'Nunito';
 font-style: normal;
 font-weight: 700;
-font-size: clamp(50px, 10vw, 72px);
-line-height: clamp(50px, 10vw, 92px);
+font-size: clamp(30px, 10vw, 72px);
+line-height: clamp(40px, 10vw, 92px);
 /* or 128% */
 
 
@@ -27,12 +27,9 @@ color: #1A1A1A;
 }
 .header_text{
    font-family: 'DM Sans';
-font-style: normal;
-font-weight: 400;
-line-height: 160%;
-/* or 26px */
 
-margin-bottom: 2.5rem;
+
+margin: clamp(1.5rem, 2vw, 2.5rem) 0;
 color: var(--p-color);
 }
 
@@ -78,6 +75,24 @@ color: var(--p-color);
    z-index: 3;
    width: 20vw;
    animation:  leaveMove 10s infinite;
+}
+
+@media (max-width: 540px){
+   .header{
+      display: block;
+   }
+   .header_img{
+      display: none;
+   }
+   .header_info{
+      width: 100%;
+   }
+}
+
+@media (max-width: 300px){
+   .info_list{
+      display: none;
+   }
 }
 
 

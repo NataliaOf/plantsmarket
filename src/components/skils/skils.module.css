@@ -19,3 +19,16 @@ line-height: 23px;
 
 color: #1A1A1A;
 }
+
+@media (max-width:400px){
+   
+   .info_title{
+     font-size: 20px;
+     line-height: 25px;
+   }
+   .info_description{
+      font-size: 16px;
+line-height: 20px;
+
+   }
+}
